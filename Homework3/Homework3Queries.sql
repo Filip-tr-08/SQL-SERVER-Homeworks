@@ -49,7 +49,7 @@ SELECT S.ID,S.FirstName,COUNT(G.Grade) AS [Num of grades] ,MAX(G.Grade) AS [Max 
 FROM [GRADE] AS G
 INNER JOIN [Student] AS S ON S.ID=G.StudentID
 GROUP BY S.ID,S.FirstName
-HAVING MAX(G.Grade)=AVG(G.Grade) -- site maksimalni ocenki se 10 a najgolemata prosecna ocenka e 9 i zatoa ne naogja ni eden student
+HAVING MAX(G.Grade)=AVG(G.Grade)
 GO
 --8. List Student First Name and Last Name next to the other details from previous query
 SELECT S.ID,CONCAT(S.FirstName,' ',S.LastName) AS [Name],COUNT(G.Grade) AS [Num of grades] ,MAX(G.Grade) AS [Max grade per student], AVG(G.Grade) AS [Average grade per student]  
