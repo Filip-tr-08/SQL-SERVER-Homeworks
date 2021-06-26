@@ -10,7 +10,7 @@ FROM [Grade] AS G
 INNER JOIN [Student] AS S ON S.ID=G.StudentID
 INNER JOIN [GradeDetails] AS GD ON GD.GradeID=G.ID
 INNER JOIN [AchievementType] AS A ON A.ID=GD.AchievementTypeID
-WHERE GD.AchievementPoints>A.ParticipationRate AND  A.Name='ispit'
+WHERE GD.AchievementPoints>51 AND  A.Name='ispit'
 AND G.TeacherID=@TeacherId AND G.CourseID=@CourseId
 RETURN 
 END 
